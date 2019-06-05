@@ -1,5 +1,6 @@
 # WarLicense
-tomcat war file add license  为war包添加授权
+该软件还在继续优化
+JavaWeb项目添加使用授权。功能包括限制只能用于单台机器，软件期限。
 
 ### 步骤一：软件加权:
 
