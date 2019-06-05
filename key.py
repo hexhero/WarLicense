@@ -6,3 +6,5 @@ print(':'.join(keys))
 enc = encoder.encode(':'.join(keys))
 with open("WEB-INF/classes/cert.cer",'wb') as f:
     f.write(enc)
+
+print("证书已生成至 WEB-INF/classes/cert.cer")

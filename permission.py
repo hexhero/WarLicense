@@ -1,4 +1,4 @@
-import zipfile
+import zipfile,sys
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
@@ -48,10 +48,14 @@ def del_file(zipname,outname,filename):
     zin.close()
 
 if __name__ == '__main__':
-    warname = input("请输入war包名称")
+    warname = sys.argv[1]
+    if warname is None or warname.strip() == '':
+            print("war包名称错误")
+            exit()
     newname = 'License_' + warname
     del_file(warname,newname,'WEB-INF/web.xml')
     makeWebXml(warname)
     writeWebXml(newname)
     sendJar(newname)
+    print("SUCCESS")
     
