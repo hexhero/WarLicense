@@ -48,7 +48,7 @@ def del_file(zipname,outname,filename):
     zin.close()
 
 if __name__ == '__main__':
-    warname = 'ygzw_wsbsdt_front.war'
+    warname = input("请输入war包名称")
     newname = 'License_' + warname
     del_file(warname,newname,'WEB-INF/web.xml')
     makeWebXml(warname)
