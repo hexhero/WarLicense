@@ -1,4 +1,4 @@
-# WarLicense
+# WarLicense  :monkey:
 (该项目还在继续优化,可靠性低)  
 JavaWeb项目添加使用授权。功能包括限制项目只能部署在单台机器和软件使用期限。
 
