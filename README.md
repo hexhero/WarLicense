@@ -30,14 +30,14 @@ python3 permission.py demo.war
 ### 步骤二：生成授权证书
 执行 `python key.py` 输入应用要部署的服务器IP地址和相应的MAC地址,证书的生效时间范围信息,生成证书。
 
-### 步骤三:  导入证书
+### 步骤三: 导入证书
  将证书导入加权的war文件 License_demo.war
  
 ```shell
 python3 import_cert.py License_demo.war
 ```
 
-### 完成
+### 步骤四: 完成
 License_demo.war 项目部署启动,检测证书有效性,检测成功，提供服务，证书失效或检测不到，系统拒绝服务.
 
 ## License
