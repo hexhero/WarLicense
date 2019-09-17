@@ -21,7 +21,7 @@ JavaWeb工程最终打成war包交付，此工具对交付的war包增加授权�
 ### 步骤一：软件加权
 给war包加权，加权后的war包需要导入证书启动后才能正常提供服务。
 将要加权的war包放入该工具目录下,执行以下命令
-```python
+```shell
 python3 permission.py demo.war
 ```
 当前目录下会生成一个License_\*.war文件.该文件就是已加权的war包  
@@ -29,6 +29,18 @@ python3 permission.py demo.war
 
 ### 步骤二：生成授权证书
 执行 `python key.py` 输入应用要部署的服务器IP地址和相应的MAC地址,证书的生效时间范围信息,生成证书。
+
+```shell
+$ python3 key.py 
+IP: 192.168.10.9
+MAC: EA-EB-AA-A9-8E-FF
+Begin_date[yyyy-MM-dd]: 2019-06-01
+End_date[yyyy-MM-dd]: 2020-01-01
+
+192.168.10.9:EA-EB-AA-A9-8E-FF:2019-06-01:2020-01-01
+证书已生成至 WEB-INF/classes/cert.cer
+```
+
 
 ### 步骤三: 导入证书
  将证书导入加权的war文件 License_demo.war
